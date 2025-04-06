@@ -17,17 +17,17 @@ public class Vacancy {
     private Long id;
 
     @Column(nullable = false)
-    private String title; // Название вакансии, например, "Java Developer"
+    private String title;
 
     @Column(columnDefinition = "TEXT")
-    private String description; // Описание вакансии
+    private String description;
 
-    private LocalDate createdAt; // Дата создания вакансии
+    private LocalDate createdAt;
 
     @ManyToOne
     @JoinColumn(name = "recruiter_id", nullable = false)
-    private Recruiter recruiter; // Связь с рекрутером
+    private Recruiter recruiter;
 
     @OneToMany(mappedBy = "vacancy", cascade = CascadeType.ALL)
-    private List<Application> applications; // Заявки на данную вакансию
+    private List<Application> applications;
 }

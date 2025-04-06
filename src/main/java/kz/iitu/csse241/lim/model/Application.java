@@ -15,13 +15,13 @@ public class Application {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate applicationDate; // Дата подачи заявки
+    private LocalDate applicationDate;
 
     @ManyToOne
     @JoinColumn(name = "applicant_id", nullable = false)
-    private Applicant applicant; // Соискатель, подавший заявку
+    private Applicant applicant;
 
     @ManyToOne
     @JoinColumn(name = "vacancy_id", nullable = false)
-    private Vacancy vacancy; // Вакансия, на которую подана заявка
+    private Vacancy vacancy;
 }
