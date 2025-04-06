@@ -1,6 +1,7 @@
 package kz.iitu.csse241.lim.service;
 
 
+
 import kz.iitu.csse241.lim.model.Vacancy;
 import kz.iitu.csse241.lim.repository.VacancyRepository;
 import org.junit.jupiter.api.BeforeEach;

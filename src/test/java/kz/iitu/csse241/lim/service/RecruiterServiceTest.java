@@ -1,16 +1,19 @@
 package kz.iitu.csse241.lim.service;
 
 
+
 import kz.iitu.csse241.lim.model.Recruiter;
 import kz.iitu.csse241.lim.repository.RecruiterRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
 
+
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
 
 class RecruiterServiceTest {
 

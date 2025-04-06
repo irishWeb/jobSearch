@@ -1,6 +1,7 @@
 package kz.iitu.csse241.lim.service;
 
 
+
 import kz.iitu.csse241.lim.model.Applicant;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,7 +9,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import kz.iitu.csse241.lim.repository.ApplicantRepository;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
 

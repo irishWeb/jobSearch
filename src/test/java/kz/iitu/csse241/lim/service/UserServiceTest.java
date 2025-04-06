@@ -1,16 +1,19 @@
 package kz.iitu.csse241.lim.service;
 
 
+
 import kz.iitu.csse241.lim.model.User;
 import kz.iitu.csse241.lim.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
 
+
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+
 
 class UserServiceTest {
 

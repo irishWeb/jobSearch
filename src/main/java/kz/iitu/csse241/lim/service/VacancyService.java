@@ -2,6 +2,7 @@ package kz.iitu.csse241.lim.service;
 
 
 
+import org.springframework.cache.annotation.Cacheable;
 import kz.iitu.csse241.lim.model.Vacancy;
 import kz.iitu.csse241.lim.repository.VacancyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,12 @@ public class VacancyService {
         this.vacancyRepository = vacancyRepository;
     }
 
+    @Cacheable("vacancies")
     public List<Vacancy> getAllVacancies() {
+        System.out.println(">>> Fetching vacancies from DB...");
         return vacancyRepository.findAll();
     }
+
 
     public Optional<Vacancy> getVacancyById(Long id) {
         return vacancyRepository.findById(id);
