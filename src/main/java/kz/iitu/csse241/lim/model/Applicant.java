@@ -1,28 +1,35 @@
 package kz.iitu.csse241.lim.model;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.List;
-
-@Getter
-@Setter
-@Entity
-@Table(name = "applicants")
 public class Applicant {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long userId;
+    private String firstName;
+    private String lastName;
+    private String phone;
 
-    @Column(nullable = false)
-    private String name; // Имя соискателя
 
-    private String email; // Электронная почта
+    public Applicant(Long userId, String firstName, String lastName, String phone) {
+        this.userId = userId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+    }
 
-    @OneToMany(mappedBy = "applicant", cascade = CascadeType.ALL)
-    private List<Resume> resumes; // Связь с резюме
+    public Applicant() {
+        this.userId = Long.valueOf(-1);
+        this.firstName = "";
+        this.lastName = "";
+        this.phone = "";
+    }
 
-    @OneToMany(mappedBy = "applicant", cascade = CascadeType.ALL)
-    private List<Application> applications; // Заявки на вакансии
+
+    public Long getUserId() { return userId; }
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getPhone() { return phone; }
+
+
+    public void setUserId(Long userId) { this.userId = userId; }
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+    public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setPhone(String phone) { this.phone = phone; }
 }
